@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@400;500;600;700&display=swap');
 
-/* ===== GLOBAL RESET ===== */
+
 * {
   box-sizing: border-box;
 }
-/* ===== BUTTON ICON ALIGNMENT ===== */
+
 .logout-btn,
 .edit-btn,
 .delete-btn {
@@ -28,18 +28,18 @@ body {
   align-items: center;
 }
 
-/* ===== MAIN CONTAINER ===== */
+
 .container {
   width: 100%;
-  max-width: 1200px;      /* wider professional layout */
-  margin: 80px auto;      /* properly centered vertically */
+  max-width: 1200px;      
+  margin: 80px auto;      
   padding: 40px;
   background: #ffffff;
   border-radius: 14px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* ===== HEADER ===== */
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -54,7 +54,7 @@ h1 {
   color: #1f2937;
 }
 
-/* ===== LOGOUT BUTTON ===== */
+
 .logout-btn {
   background: #ef4444;
   color: white;
@@ -70,7 +70,7 @@ h1 {
   background: #dc2626;
 }
 
-/* ===== FORM ROW ===== */
+
 .form-row {
   display: flex;
   gap: 12px;
@@ -78,7 +78,7 @@ h1 {
   margin-bottom: 25px;
 }
 
-/* ===== INPUTS (Name Field Improved) ===== */
+
 input {
   padding: 10px 12px;
   border-radius: 8px;
@@ -102,7 +102,7 @@ input:focus {
   background-color: #ffffff;
 }
 
-/* ===== SELECT (Course + Year Level Improved) ===== */
+
 select {
   padding: 10px 12px;
   border-radius: 8px;
@@ -128,7 +128,7 @@ select option {
   color: #1f2937;
 }
 
-/* ===== ADD BUTTON ===== */
+
 .add-btn {
   background: #6366f1;
   color: white;
@@ -144,7 +144,7 @@ select option {
   background: #4f46e5;
 }
 
-/* ===== STUDENT LIST ===== */
+
 .student-list {
   list-style: none;
   padding: 0;
@@ -162,7 +162,7 @@ select option {
   border: 1px solid #e5e7eb;
 }
 
-/* ===== ACTION BUTTONS ===== */
+
 .actions {
   display: flex;
   gap: 8px;
@@ -196,7 +196,7 @@ select option {
   background: #dc2626;
 }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 768px) {
   .container {
     margin: 20px;

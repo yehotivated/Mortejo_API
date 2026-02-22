@@ -64,16 +64,14 @@ function App() {
 
   return (
     <div className="container">
-      {/* ✅ HEADER */}
       <div className="header">
         <h1>Student Management</h1>
         <button className="logout-btn" onClick={handleLogout}>
           <LogoutIcon className="btn-icon" />
-            Logout
-</button>
+          Logout
+        </button>
       </div>
 
-      {/* ✅ FORM ROW */}
       <div className="form-row">
         <input
           name="name"
@@ -101,13 +99,11 @@ function App() {
           <option>Year 4</option>
         </select>
 
-        {/* ✅ ADD BUTTON */}
         <button className="add-btn" onClick={handleSubmit}>
           {editId ? "Update Student" : "Add Student"}
         </button>
       </div>
 
-      {/* ✅ STUDENT LIST */}
       <ul className="student-list">
         {students.map((s) => (
           <li key={s.id} className="student-item">
@@ -117,19 +113,19 @@ function App() {
 
             <div className="actions">
               <button
-                  className="edit-btn"
-                  onClick={() => handleEdit(s)}
-                >
-                  <EditIcon className="btn-icon" />
-                  Edit
-                </button>
+                className="edit-btn"
+                onClick={() => handleEdit(s)}
+              >
+                <EditIcon className="btn-icon" />
+                Edit
+              </button>
               <button
-                  className="delete-btn"
-                  onClick={() => handleDelete(s.id)}
-                >
-                  <DeleteIcon className="btn-icon" />
-                  Delete
-                </button>
+                className="delete-btn"
+                onClick={() => handleDelete(s.id)}
+              >
+                <DeleteIcon className="btn-icon" />
+                Delete
+              </button>
             </div>
           </li>
         ))}

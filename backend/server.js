@@ -7,17 +7,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ✅ MySQL connection
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "joshua", // ← your mysql password
+  password: "joshua",
   database: "studentdb",
 });
 
-// =============================
-// GET students
-// =============================
 app.get("/students", (req, res) => {
   db.query("SELECT * FROM students", (err, result) => {
     if (err) return res.json(err);
@@ -25,9 +21,6 @@ app.get("/students", (req, res) => {
   });
 });
 
-// =============================
-// ADD student
-// =============================
 app.post("/students", (req, res) => {
   console.log("BODY RECEIVED:", req.body);
   const { name, course, year_level } = req.body;
@@ -42,9 +35,6 @@ app.post("/students", (req, res) => {
   );
 });
 
-// =============================
-// UPDATE student
-// =============================
 app.put("/students/:id", (req, res) => {
   const { id } = req.params;
   const { name, course, year_level } = req.body;
@@ -59,9 +49,6 @@ app.put("/students/:id", (req, res) => {
   );
 });
 
-// =============================
-// DELETE student
-// =============================
 app.delete("/students/:id", (req, res) => {
   const { id } = req.params;
 
@@ -71,7 +58,6 @@ app.delete("/students/:id", (req, res) => {
   });
 });
 
-// =============================
 app.listen(5000, () => {
   console.log("Server running on port 5000");
 });
